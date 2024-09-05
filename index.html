@@ -76,6 +76,7 @@
 			}
 			requestAnimationFrame(draw);
 		}
+
 		draw();
 
 		function showFlower() {
@@ -96,24 +97,39 @@
 		}, 3000);
 		}
 		
+		// function checkInput() {
+		// 		var userInput = document.getElementById('userInput').value;
+		// 		if (userInput === '陈晨是混蛋') {
+		// 			
+		// 		} else {
+		// 			alert('密码错误');
+		// 		}
+		// }
 		function checkInput() {
-				var userInput = document.getElementById('userInput').value;
-				if (userInput === '陈晨是混蛋') {
-					window.open('offer.html', '_blank');
-				} else {
-					alert('密码错误');
-				}
+			var userInput = document.getElementById('userInput').value;
+			if (userInput === '陈晨是混蛋') {
+				window.open('offer.html', '_blank');
+			} else {
+				alert('密码错误');
 			}
+		}
+
 	</script>
+
 	<h1>
 		<p style="text-align:center">陈晨是混蛋</p>
 	</h1>
+
 	<button onclick="showFlower()">
 		<p style="text-align:center">给皇帝上贡</p>
 	</button>
-	<div id="chatBox">
-		<input type="text" id="userInput" onkeyup="checkInput()" placeholder="输入内容">
+
+	<div id="result"></div>
+	<div>
+		<input type="text" id="userInput" placeholder="输入内容">
+		<button onclick="checkInput()">确认</button>
 	</div>
+
 	<img src="dianju.gif" height="240" width="240" />
 	<img style="text-align:center" src="chenchen2.jpg" height="250" width="280" />
 	<img style="text-align:center" src="chenchen1.jpg" height="250" width="280" />
